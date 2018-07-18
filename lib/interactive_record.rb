@@ -60,7 +60,6 @@ class InteractiveRecord
         column = attribute.keys.first
         value = attribute.keys.first
 
-
         sql = <<-SQL
             SELECT * FROM #{table_name}
             WHERE #{column} = #{value}
@@ -69,7 +68,4 @@ class InteractiveRecord
         [] << DB[:conn].execute(sql)[0]
 
     end
-
-
-
 end
