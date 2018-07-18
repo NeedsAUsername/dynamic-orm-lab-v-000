@@ -57,7 +57,7 @@ class InteractiveRecord
     end
 
     def self.find_by(attribute)
-        column = attribute.keys.first
+        column = attribute.keys.first.to_s
         value = attribute.keys.first
         if value.is_a? Integer
             value = attribute.keys.first.to_i
